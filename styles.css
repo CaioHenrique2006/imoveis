@@ -94,3 +94,23 @@ main {
         }
     }
 }
+
+#imoveis {
+    padding: 2rem;
+    background: url(./img/img-2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    
+
+    h2 {
+        text-align: center;
+    }
+
+    .carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+}
