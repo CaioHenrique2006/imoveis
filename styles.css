@@ -72,7 +72,7 @@ main {
         background-color: #0000009f;
         z-index: 1;
     }
-    
+
     .about-box {
         position: relative;
         z-index: 2;
@@ -82,7 +82,7 @@ main {
         align-items: center;
         gap: 3rem;
         padding: 8rem;
-        
+
 
         h2 {
             font-size: 2rem;
@@ -101,7 +101,7 @@ main {
     background-size: cover;
     background-position: center;
     height: 100vh;
-    
+
 
     h2 {
         text-align: center;
@@ -112,5 +112,50 @@ main {
         justify-content: center;
         align-items: center;
         gap: 1rem;
+
+        .arrow-1 {
+            background: none;
+            border: none;
+            width: 2rem;
+            cursor: pointer;
+
+            .left {
+                height: 2rem;
+            }
+        }
+
+
+        .carousel-viewport {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-track {
+            display: flex;
+
+            article {
+                flex-shrink: 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+
+                .img-art {
+                    height: 15rem;
+                }
+            }   
+        }
+
+        .arrow-2 {
+            background: none;
+            border: none;
+            width: 2rem;
+            cursor: pointer;
+
+            .right {
+                height: 2rem;
+            }
+        }
     }
 }
