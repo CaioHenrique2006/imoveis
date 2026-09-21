@@ -101,17 +101,30 @@ main {
     background-size: cover;
     background-position: center;
     height: 100vh;
+    position: relative;
+    isolation: isolate;
+
+    .overlay-2 {
+        position: absolute;
+        inset: 0;
+        background-color: #0000009f;
+        z-index: 1;
+    }
 
 
     h2 {
+        position: relative;
+        z-index: 2;
         text-align: center;
+        font-size: 1.5rem;
     }
 
     .carousel {
+        position: relative;
+        z-index: 2;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
 
         .arrow-1 {
             background: none;
@@ -139,10 +152,19 @@ main {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 1rem;
+                gap: 4rem;
 
                 .img-art {
                     height: 15rem;
+                    border-radius: 25px;
+                    margin-top: 3.5rem;
+                }
+
+                .house {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 1rem;
                 }
             }   
         }
