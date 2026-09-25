@@ -295,3 +295,52 @@ main {
         }
     }
 }
+
+#finally {
+    padding: 2rem;
+    background-color: #fff;
+    color: #000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+
+    h2 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .caixa-icones {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+footer {
+    padding: 1rem;
+
+    .caixa-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .title-logo {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+}
