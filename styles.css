@@ -36,6 +36,29 @@ main {
     justify-content: center;
     align-items: center;
 
+    aside {
+        position: fixed;
+        right: 0;
+        height: 100vh;
+        display: flex;
+        gap: 2rem;
+        padding: 1rem 2rem;
+        background-color: #0000009f;
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+    }
+
     section {
         text-align: center;
         display: flex;
@@ -53,7 +76,12 @@ main {
             color: #fff;
             background: #0000009f;
             padding: 1rem 2rem;
-            border-radius: 0.5rem
+            border-radius: 0.5rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            background-color: #3f3d3dab;
         }
     }
 }
@@ -296,7 +324,7 @@ main {
     }
 }
 
-#finally {
+#consideracoes {
     padding: 2rem;
     background-color: #fff;
     color: #000;
