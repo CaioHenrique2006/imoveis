@@ -11,3 +11,12 @@ linksMenu.forEach(link => {
 abrirMenu.addEventListener('click', () => {
     sideBar.classList.toggle('aberto');
 })
+
+document.addEventListener('click', (event) => {
+    const clicouNoMenu = sideBar.contains(event.target);
+    const clicouNoIcone = abrirMenu.contains(event.target);
+
+    if (!clicouNoMenu && !clicouNoIcone) {
+        sideBar.classList.remove('aberto');
+    }
+})
