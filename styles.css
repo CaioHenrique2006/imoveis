@@ -330,6 +330,26 @@ main {
     }
 }
 
+#servicos.reveal-ready > article {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 600ms ease, transform 600ms ease;
+    transition-delay: 0ms;
+}
+
+#servicos.reveal-ready > article.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 600ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #servicos.reveal-ready > article {
+        transition: none;
+        transform: none;
+    }
+}
+
 #consideracoes {
     padding: 2rem;
     background-color: #fff;
