@@ -179,6 +179,8 @@ main {
 
         .carousel-track {
             display: flex;
+            transition: transform 500ms ease-in-out;
+            will-change: transform;
 
             article {
                 flex-shrink: 0;

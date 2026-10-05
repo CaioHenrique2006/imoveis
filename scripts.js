@@ -46,3 +46,25 @@ const observador = new IntersectionObserver((entradas, observer) => {
 cardsServicos.forEach(card => {
     observador.observe(card);
 });
+
+// ANIMAÇÃO DO CARROSSEL // 
+
+const track = document.querySelector('.carousel-track');
+const cards = track.querySelectorAll('article');
+const botaoAnterior = document.querySelector('.arrow-1');
+const botaoProximo = document.querySelector('.arrow-2');
+
+let indiceAtual = 0;
+
+function mostrarImovel(index) {
+    indiceAtual = (index + cards.length) % cards.length;
+    track.style.transform = `translateX(-${indiceAtual * 100}%)`;
+}
+
+botaoAnterior.addEventListener('click', () => {
+    mostrarImovel(indiceAtual - 1);
+});
+
+botaoProximo.addEventListener('click', () => {
+    mostrarImovel(indiceAtual + 1);
+})
