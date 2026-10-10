@@ -93,16 +93,15 @@ main {
 }
 
 .about {
-    padding: 2rem auto;
+    position: relative;
     background: url(./img/casa-2.jpg);
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
 
     .overlay {
         position: absolute;
-        width: 100%;
-        height: 100vh;
+        inset: 0;
         background-color: #0000009f;
         z-index: 1;
     }
@@ -159,6 +158,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 2rem;
 
         .arrow-1 {
             background: none;
@@ -173,7 +173,8 @@ main {
 
 
         .carousel-viewport {
-            width: 100%;
+            flex: 1 1 0;
+            min-width: 0;
             overflow: hidden;
         }
 
@@ -189,6 +190,7 @@ main {
                 flex-direction: column;
                 align-items: center;
                 gap: 4rem;
+                padding-inline: 1rem;
 
                 .img-art {
                     height: 15rem;
@@ -342,7 +344,7 @@ main {
 #servicos.reveal-ready > article.visible {
     opacity: 1;
     transform: translateY(0);
-    transition-delay: 600ms;
+    transition-delay: var(--reveal-delay, 0ms);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -356,7 +358,7 @@ main {
     padding: 2rem;
     background-color: #fff;
     color: #000;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -413,5 +415,117 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+    .menu {
+        top: 2.8rem;
+        width: min(80vw, 20rem);
+        height: calc(100dvh - 2.8rem);
+    }
+
+    .about {
+        min-height: 100svh;
+        display: grid;
+        align-items: center;
+
+        .about-box {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 3rem 1.25rem;
     
+            h2 {
+                font-size: clamp(1.5rem, 5vw, 2rem);
+            }
+    
+            p {
+                text-align: center;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    #imoveis {
+        padding: 1.5rem 1rem;
+        min-height: 100svh;
+        height: auto;
+
+        .carousel {
+            .carousel-viewport {
+                flex: 1 1 0;
+                min-width: 0;
+            }
+
+            .carousel-track article {
+                gap: 1.5rem;
+
+                .img-art {
+                    width: min(100%, 22rem);
+                    max-width: 100%;
+                    height: auto;
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+
+    #servicos {
+        padding: 2rem 1rem;
+
+        .service-card,
+        .location-card,
+        .documentation-card {
+            width: min(100%, 37.5rem);
+            max-width: 100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            margin: 3rem auto;
+        }
+
+        .container-texto,
+        .container-compra,
+        .container-location,
+        .container-command2,
+        .caixa-1,
+        .caixa-2 {
+            width: 100%;
+        }
+
+        .service-card h3,
+        .location-card h3,
+        .documentation-card h3 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .img-compra,
+        .img-location,
+        .doc {
+            width: min(100%, 15rem);
+            height: auto;
+        }
+    }
+
+    #consideracoes {
+        min-height: 100svh;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .about .about-box {
+        padding: 2rem 1rem;
+    }
+
+    #imoveis {
+        padding: 1rem 0.5rem;
+    }
+
+    main section h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
 }

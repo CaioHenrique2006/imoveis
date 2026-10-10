@@ -29,7 +29,7 @@ const cardsServicos = secaoServicos.querySelectorAll(':scope > article');
 secaoServicos.classList.add('reveal-ready');
 
 cardsServicos.forEach((card, index) => {
-    card.style.setProperty('reveal-delay', `${index * 100}ms`);
+    card.style.setProperty('--reveal-delay', `${index * 100}ms`);
 })
 
 const observador = new IntersectionObserver((entradas, observer) => {
@@ -40,7 +40,7 @@ const observador = new IntersectionObserver((entradas, observer) => {
         }
     });
 }, {
-    threshold: 0.5
+    threshold: 0.1
 });
 
 cardsServicos.forEach(card => {
