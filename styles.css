@@ -425,15 +425,12 @@ footer {
     .about {
         min-height: 100svh;
         display: grid;
-        align-items: center;
 
         .about-box {
             position: relative;
             z-index: 2;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             gap: 1.5rem;
             padding: 3rem 1.25rem;
     
@@ -466,7 +463,7 @@ footer {
                     width: min(100%, 22rem);
                     max-width: 100%;
                     height: auto;
-                    margin-top: 2rem;
+                    margin-top: 8rem;
                 }
             }
         }
